@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+:root {
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+    --verde-claro: #B6EB70;
+    --verde-escuro: #17706E;
+    --laranja: #FB7813;
+    --background: #F7F7EE;
+    --branco: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+.username{
+    font-family: var(--fonte-titulo);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.leftcomentsection{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+}
+
+p{
+    font-size: 10px;
+    font-family: var(--fonte-texto);
+}
+
+.card-coment{
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.save{
+    background: #17706E;
+    border: none;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 200px;
+    color: #F7F7EE;
+    font-family: var(--fonte-texto);
+    font-weight: bold;
+    margin:0;
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 10px;
+}
+
+.card-envio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    color: #000;
+    font-family: var(--fonte-texto);
+    font-weight: bold;
+    margin: 0.1em;
+    font-size: 10px;
+}
+
+.comenttext{
+    border: none;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    padding: 0.2em;
+    margin: 0.5em;
+}
+
+.card-envio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coment-toggler{
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    margin-left: 0.2em;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+    padding: 0.5px;
+}
+
+.close{
+    font-size: 16px;
+    color: #F7F7EE;
+}
+
+.button-salve{
+    margin-left: 0.5em;
+}
+
+
+
+@media (max-width: 850px){
+    .comenttext{
+        border: none;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 180px;
+        padding: 0.2em;
+        margin: 0.5em;
+    }
+
+
+}

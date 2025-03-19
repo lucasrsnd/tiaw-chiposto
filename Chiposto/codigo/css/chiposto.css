@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+:root{
+    --fonte-titulo:'Poppins', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+    --verde-claro: #B6EB70;
+    --verde-escuro: #17706E;
+    --laranja: #FB7813;
+    --background: #F7F7EE;
+    --branco: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+#map {
+    height: 450px;
+}
+
+.car-img {
+    height: 100px;
+}
+
+.car-body {
+    border-radius: 50%;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.img-cabecalho{
+    width: 200px;
+}
+
+.botoes-cabecalho{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.botoes-cabecalho-fun{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--background);
+    color: var(--verde-escuro);
+    font-family: var(--fonte-texto);
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#btnFiltrar{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--background);
+    color: var(--verde-escuro);
+    font-family: var(--fonte-texto);
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.search-navbar{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search-box-input{
+    margin: 5px;
+    padding: 5px 40px;
+    text-decoration: none;
+    background-color: var(--background);
+    color: var(--verde-escuro);
+    font-size:16px;
+    font-family: var(--fonte-texto);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 3px 11px 5px -4px rgba(0,0,0,0.19);
+}
+
+.search-box-button{
+    border: var(--background);
+    padding: 8px;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: var(--background);
+    box-shadow: 3px 11px 5px -4px rgba(0,0,0,0.19);
+}
+
+.lupa{
+    background-color: var(--background);
+    color: var(--verde-escuro);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.mapa-log{
+    margin-bottom: 20px;
+}
+
+  /**/
+
+#container {
+    display: flex;
+    
+}
+
+/* estilização das checkbox */
+.checkbox-wrapper-2 .ikxBAC {
+  appearance: none;
+  background-color: #dfe1e4;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
+}
+
+.checkbox-wrapper-2 .ikxBAC::before {
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+}
+
+.checkbox-wrapper-2 .ikxBAC,
+.checkbox-wrapper-2 .ikxBAC::after {
+  transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper-2 .ikxBAC::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
+}
+
+.checkbox-wrapper-2 input[type=checkbox] {
+  cursor: default;
+}
+
+.checkbox-wrapper-2 .ikxBAC:hover {
+  background-color: #c9cbcd;
+  transition-duration: 0s;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked {
+  background-color: #6e79d6;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked::after {
+  background-color: #fff;
+  left: 13px;
+}
+
+.checkbox-wrapper-2 :focus:not(.focus-visible) {
+  outline: 0;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked:hover {
+  background-color: #535db3;
+}
+
+.botaozin{
+    background: #17706E;
+    border: none;
+    color: #F7F7EE ;
+    font-family: var(--fonte-texto);
+    padding: 0.4em;
+    border-radius: 10px;
+    margin: 1em;
+}
+
+/* estilização das checkbox */
+
+#esquerda {
+    width: 20%;
+    background-color: var(--background);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 140px; /* altura que está do topo */ 
+    top: 50px; /* altura que vai parar antes do topo */ 
+    position: sticky;
+    height: 400px;
+}
+
+#main{
+    display: flex;
+}
+
+#direita {
+    background-color: var(--branco);
+    padding: 20px;
+    margin: 5px;
+    width: 80%;
+}
+
+.titulo-mapa{
+    font-family: var(--fonte-titulo);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/**/
+
+.card {
+    margin: 20px auto;
+    border: none;
+    width: 63em;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+#card-imagem{
+    height: 160px;
+    margin: 0;
+    width: 200px;
+    border-radius:20px ;
+}
+
+.conteudo-card{
+    margin-left: 10px ;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: var(--fonte-titulo) ;
+    font-weight: bold;
+    background: var(--branco);
+
+}
+
+.card-description {
+    margin-bottom: 15px;
+}
+
+.fa-location-dot{
+    margin-right: 5px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: var(--verde-escuro);
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+
+.button {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 0 20px 0 20px;
+    border: none;
+    color: var(--branco);
+    width: 10em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--verde-escuro);
+    font-weight: bold;
+    font-family: var(--fonte-texto);
+}
+
+.fa-star{
+    color: var(--laranja);
+}
+
+
+.fa-bookmark{
+    font-size: 20px;
+}
+
+.button-salve{
+    border: none;
+}
+
+.slv-dth{
+    display: flex;
+    padding: 1em;
+}
+
+.btn-modal{
+    margin-left: 1em;
+    text-decoration: none;
+    color: var(--verde-escuro);
+    font-family: var(--fonte-texto);
+}
+
+.img-rodape{
+    height: 90px;
+    margin-left: 2em;
+  }
+  .star {
+    width: 10px;
+}
+.star-registred{
+    width: 10px;
+} 
+.mapboxgl-marker>*{
+    background-color: transparent;
+}
+
+.hamburguer-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-content {
+    display: none;
+  }
+  
+  .menu-content.show {
+    display: block;
+  }

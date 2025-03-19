@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/inicio.css">
+
+</head>
+
+<body>
+
+    <div class="login">
+        <div class="adm">
+            <a class="botao-login" id="botao-adm"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <a class="botao-login" href="./login.html"><i class="fa-regular fa-user fa-lg"></i></a>
+    </div>
+
+
+    <div class="container">
+        <div class="conteudo">
+            <div class="imagem-holder">
+                <img class="imagem" src="./assets/Design sem nome (1).png" alt="Logo do projeto">
+            </div>
+            <a class="texto" href="./sobre.html">Conheça a Chiposto</a>
+            
+            <div class="box-busca">
+                <div class="search-box">
+
+                    <form class="search" id="formulario" method="post" action="#">
+                        <input type="text" class="search-box-input" id="posto-search" name="busca"
+                            placeholder="Procure por Postos">
+                       <a href="#" class="pesquisa search-box-button"><i class=" lupa fa-solid fa-magnifying-glass"></i></a>
+                    </form>
+                    <div class="enderecos-container">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="localizacao-container">
+                <i id="loc" class="fa-solid fa-location-dot"></i><span class="localizacao" id="localizacao-atual">Use a sua localização
+                    atual</span>
+            </div>
+           
+            <a class="botao pesquisa" href="#">Pesquisar</a>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/70e732b00c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

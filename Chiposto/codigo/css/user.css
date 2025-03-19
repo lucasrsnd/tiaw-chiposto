@@ -1,0 +1,242 @@
+
+
+.card {
+    width: 350px;
+    background-color: #fffcf0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image img {
+    transition: all 0.5s;
+}
+
+.card:hover .image img {
+    transform: scale(1.1);
+}
+
+.btn2 {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-color: #52806d;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.idd1 {
+    font-size: 12px;
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.follow {
+    font-size: 12px;
+    font-weight: 500;
+    color: #444444;
+}
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border: none;
+    background-color: #52806d;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.text span {
+    font-size: 13px;
+    color: #545454;
+    font-weight: 500;
+}
+
+.icons i {
+    font-size: 19px;
+}
+
+.new1 {
+    border: 1px solid;
+}
+
+.join {
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.date {
+    background-color: #ccc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap');
+
+:root{
+    --fonte-titulo:'Poppins', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+    --verde-claro: #B6EB70;
+    --verde-escuro: #17706E;
+    --laranja: #FB7813;
+    --background: #F7F7EE;
+    --branco: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em;
+    font-weight: bold;
+    background-color: var(--branco);
+}
+
+.img-cabecalho{
+    height: 100px;
+    display: block;
+}
+
+.botoes-cabecalho-fun{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--background);
+    color: var(--verde-escuro);
+    font-family: var(--fonte-texto);
+    border-radius: 20px;
+    margin: 5px;
+}
+
+@media (max-width: 850px) {
+    .img-cabecalho {
+        display: none;
+    }
+
+    .cabecalho {
+        justify-content: center;
+        margin: 2em;
+    }
+
+    .botoes-cabecalho {
+        text-align: center; /* Alinha os botões centralmente quando a imagem é ocultada */
+    }
+    
+ 
+}
+.logout{
+    background-color:  lightcoral;
+    border-radius: 30px;
+    
+}
+.btn1:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+.btn1:active{
+    scale: 1;
+    cursor: auto;
+}
+/* Estilos para o contêiner do cartão */
+.card-content {
+    /* Adicione os estilos necessários para o contêiner do cartão */
+    /* Exemplo: */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para a imagem do cartão */
+#card-imagem,
+.card-imagem img {
+    /* Adicione os estilos necessários para a imagem do cartão */
+    /* Exemplo: */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para o conteúdo do cartão */
+.conteudo-card {
+    /* Adicione os estilos necessários para o conteúdo do cartão */
+    /* Exemplo: */
+    margin-left: 16px;
+    flex: 1;
+}
+
+/* Estilos para o título do cartão */
+.card-title {
+    /* Adicione os estilos necessários para o título do cartão */
+    /* Exemplo: */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para o link "Ir" do cartão */
+.btn-modal {
+    /* Adicione os estilos necessários para o link "Ir" do cartão */
+    /* Exemplo: */
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Estilos para a descrição do cartão */
+.card-description {
+    /* Adicione os estilos necessários para a descrição do cartão */
+    /* Exemplo: */
+    margin-top: 8px;
+    color: #666;
+}
+
+
+/* Estilos para o botão de salvamento do cartão */
+.button-salve {
+    /* Adicione os estilos necessários para o botão de salvamento do cartão */
+    /* Exemplo: */
+    background-color: var(--verde-escuro);
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para o preço do cartão */
+.button {
+    /* Adicione os estilos necessários para o preço do cartão */
+    /* Exemplo: */
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+#card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

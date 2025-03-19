@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiposto</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/chiposto.css">
+  <link rel="stylesheet" href="./css/notificacao.css">
+  <link rel="stylesheet" href="./css/coment.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img img class="img-cabecalho" src="./Assets/Design_sem_nome__5_-removebg-preview.png" alt="Chiposto">
+          </a>
+        </div>
+        <button class="navbar-toggler btn custom-toggler btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="botoes-cabecalho">
+            <a class="botoes-cabecalho-fun" href="./index.html">Inicio</a>
+            <a class="botoes-cabecalho-fun" href="./sobre.html">Sobre</a>
+            <a class="botoes-cabecalho-fun" href="./login.html">Entrar</a>
+            <a class="botoes-cabecalho-fun" onclick="showNotifications()">
+              <i class="fa-regular fa-bell sino"></i><span class="badge contador" id="notification-count-badge">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Modal de Boas-Vindas -->
+  <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="welcomeModalLabel">Informações</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="span">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bem-vindo ao nosso site! Esperamos que você tenha uma excelente experiência.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Notificações -->
+  <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notificationModalLabel">Informações</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+            onclick="showLatestNotification()">
+            <span aria-hidden="true" class="span">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="notificationBody">
+          <!-- Notificações serão exibidas aqui -->
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <img class="img-logo" src="./Assets/Design_sem_nome__5_-removebg-preview.png" alt="Logo ChipostoS">
+          <button class="btn botao" onclick="openNewNotificationModal()">Nova Notificação</button>
+          <button class="btn btn-danger" onclick="deleteAllNotifications()">Excluir Todas</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Novas Notificações -->
+  <div class="modal fade" id="newNotificationModal" tabindex="-1" role="dialog"
+    aria-labelledby="newNotificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="newNotificationModalLabel">Nova Notificação</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="span">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="newNotificationMessage" class="form-control"
+            placeholder="Digite a mensagem da notificação">
+          <label class="texto-label" for="newNotificationType">Tipo:</label>
+          <select id="newNotificationType" class="form-control">
+            <option value="info">Informação</option>
+            <option value="warning">Aviso</option>
+            <option value="error">Erro</option>
+          </select>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <button class="btn btn-success" onclick="saveNewNotification()">Salvar Notificação</button>
+          <img class="img-logo" src="./Assets/Design_sem_nome__4_-removebg-preview.png" alt="Logo ChipostoS">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="main">
+    <div class="hamburguer-menu">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <button class="botaozin">Filtro</button>
+      </div>
+      <div class="menu-content" >
+          <div id="ordenar">
+            <input type="radio" name="ordenar" id="btnDistancia" onchange="iniciar()">Ordernar por Distância</input>
+            <br>
+            <input type="radio" name="ordenar" id="btnPreco" onchange="iniciar()">Ordernar por Preço</input>
+          </div>
+          <br>
+          <div id="filtrar">
+            <label for="distanceRange">Distância: </label>
+            <input type="range" id="distanceRange" min="0" max="20" step="0.5" value="7" onchange="iniciar()">
+            <span id="distanceValue">7 km</span>
+            <h4>Filtrar por Características:</h2>
+              <div>
+                <div class="checkbox-wrapper-2">
+                  <input type="checkbox" class="sc-gJwTLC ikxBAC" id="chkLavaRapido" onclick="iniciar()"> Lava-rápido
+                </div>
+                <div class="checkbox-wrapper-2">
+                  <input type="checkbox" class="sc-gJwTLC ikxBAC" id="chkRestaurante" onclick="iniciar()"> Restaurante
+                </div>
+                <div class="checkbox-wrapper-2">
+                  <input type="checkbox" class="sc-gJwTLC ikxBAC" id="chkOficina" onclick="iniciar()"> Oficina
+                </div>
+                <div class="checkbox-wrapper-2">
+                  <input type="checkbox" class="sc-gJwTLC ikxBAC" id="chk24h" onclick="iniciar()"> 24h
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="direita">
+      <div class="mapa-log">
+        <h2 class="titulo-mapa">Sua região:</h2>
+        <div class="container">
+          <div class="mapa">
+           
+            <section class="mt-5">
+              <div class="container">
+                <h2 class="mb-0">Mapa:</h2>
+                <hr class="mt-1">
+                <div class="row">
+                  <div id="map"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <h2 class="titulo-mapa">Postos próximos:</h2>
+        <div class="row card-bai" id="card-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    <a href="./index.html"><img class="img-rodape" src="./assets/Design sem nome (1).png" alt="chiposto logo"></a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/70e732b00c.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./js/chiposto.js"></script>
+  <script src="./js/mapa.js"></script>
+
+</body>
+
+</html>

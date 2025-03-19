@@ -1,0 +1,268 @@
+.cabecalho{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  font-weight: bold;
+}
+
+
+.botoes-cabecalho-fun {
+text-decoration: none;
+padding: 10px 20px;
+background-color: var(--background);
+color: var(--verde-escuro);
+font-family: var(--fonte-texto);
+border-radius: 20px;
+margin: 5px;
+}
+
+.botoes-cabecalho-fun:hover {
+text-decoration: none;
+color: #83a854;
+cursor: pointer;
+}
+
+.search-box-input{
+  margin: 5px;
+  padding: 5px 40px;
+  text-decoration: none;
+  background-color: var(--background);
+  color: var(--verde-escuro);
+  font-size:16px;
+  font-family: var(--fonte-texto);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 3px 11px 5px -4px rgba(0,0,0,0.19);
+}
+
+  #notification-badge {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: none;
+  }
+
+.span{
+  background-color: #17706E;
+}
+
+  .notification-card {
+    margin-bottom: 10px;
+  }
+
+  #notification-count-badge {
+    animation: pulse 1s infinite;
+  }
+
+  .modal-title{
+      background: #17706E;
+  }
+  
+  .notification-card {
+margin-bottom: 10px;
+width: 450px; 
+height: auto; 
+}
+
+.modal-content {
+max-height: 80vh; 
+overflow-y: auto;
+}
+
+.modal-footer {
+border-top: 1px solid #dee2e6;
+position: sticky;
+bottom: 0;
+background-color: white;
+}
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .notification-card {
+  margin-bottom: 10px;
+}
+
+#notification-count-badge {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Estilos para os modais */
+.modal-header {
+  background-color: #17706E;
+  color: #fff;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Estilos para os botões */
+.btn-primary {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #F7F7EE ;
+  color: #17706E;
+  border-radius: 20px;
+  margin: 5px;
+  border: #F7F7EE ;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.btn-danger {
+  background-color: #FB7813;
+  border-color: #FB7813;
+}
+
+.btn-danger:hover {
+  background-color: #b34e01;
+  border-color: #b34e01;
+}
+
+.btn-success {
+  background-color:  #B6EB70;
+  border-color:  #B6EB70;
+}
+
+.btn-success:hover {
+  background-color:  #83a854;
+  border-color: #83a854;
+}
+
+.texto-label{
+  background: none;
+  font-size: 16px;
+}
+
+#welcomeModal .modal-header .close {
+background: none;
+}
+
+.modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1px;
+  font-weight: bold;
+}
+
+.img-logo {
+  height: 40px; 
+  margin-right: 20px; 
+}
+
+.contador{
+  background-color: #17706E;
+  position: absolute;
+  top: 30%;
+  right: 2.5%;
+}
+
+.sino{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.badge {
+  position: absolute;
+  top: -0.5px; 
+  right: 0.1px;
+  background-color: red; 
+  color: white; 
+  border-radius: 50%;
+  padding: 4px 8px; 
+}
+
+
+
+.botao-laranja {
+  background-color: #FB7813;
+  border-color: #FB7813;
+}
+
+
+.botao-verde {
+  background-color:  #B6EB70;
+  border-color:  #B6EB70;
+}
+
+
+.menu-content{
+  background: #F7F7EE;
+  margin: 0.5em;
+  padding: 0.8em;
+  border-radius: 20px;
+}
+
+
+@media (max-width: 850px){
+  .container {
+    position: relative;
+    z-index: 1; 
+  }
+
+  .menu-content {
+    position: absolute;
+    top: 240px;
+    background: #F7F7EE;
+    margin: 1em;
+    margin-left:2em ;
+    padding: 1em;
+    border-radius: 20px;
+    z-index: 2; 
+    width: 240px;
+  }
+
+  .container{
+    width: 250px;
+    margin: 0;
+  }
+
+  .hamburguer-menu{
+    width: 70px;
+  }
+
+  .card-bai{
+    margin-bottom: 0.5em;
+  }
+
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+    
+    .img-cabecalho{
+        display: none;
+    }
+
+    .custom-toggler {
+      background-color: blue; /* Define a cor azul para o fundo do botão */
+    }
+    
+    .custom-toggler .navbar-toggler-icon {
+      background-color: black; /* Define a cor branca para o ícone */
+    }
+
+}

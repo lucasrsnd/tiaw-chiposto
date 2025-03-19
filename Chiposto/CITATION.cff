@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Chiposto
+authors:
+  - family-names: Caldas Pacheco
+    given-names: Leandro
+  - family-names: Gabriel Maia da Costa
+    given-names: Joao 
+  - family-names: Alves Resende
+    given-names: Lucas
+  - family-names: Érico dos Santos
+    given-names: Davi
+  - family-names: Arthur Vicentini
+    given-names: Gabriel
+  - family-names: Flores Brescia
+    given-names: Nathan
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Silva Tavares
+    given-names: Cleiton
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Mara Freitas Diniz
+    given-names: Luciana
+keywords:
+  - 
+  - 
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2023-12-12
